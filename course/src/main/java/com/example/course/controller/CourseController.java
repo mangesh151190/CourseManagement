@@ -19,10 +19,16 @@ public class CourseController {
 	CourseRepository courseRepository; 
 	
 	@RequestMapping("/course")
-    public List<Course> courseList() {
+	public List<Course> courseList() {
 		return courseRepository.findAll();
-        
-    }
+
+	}
+
+	@RequestMapping("/course/duplicate")
+	public List<Course> courseListDuplicate() {
+		return courseRepository.findAll();
+
+	}
 	
 	@RequestMapping(value = "/course/add", method = RequestMethod.POST)
 	public List<Course> addCourse(@RequestBody Course course) {

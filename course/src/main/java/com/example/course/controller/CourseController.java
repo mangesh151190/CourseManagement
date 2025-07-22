@@ -20,6 +20,7 @@ public class CourseController {
 	
 	@RequestMapping("/course")
 	public List<Course> courseList() {
+		System.out.println("nice");
 		return courseRepository.findAll();
 
 	}

@@ -21,6 +21,8 @@ public class CourseController {
 	@RequestMapping("/course")
 	public List<Course> courseList() {
 		System.out.println("nice");
+		System.out.println("nice but from master");
+		System.out.println("nice merge to resolve conflicts and then commit the result");
 		return courseRepository.findAll();
 
 	}
